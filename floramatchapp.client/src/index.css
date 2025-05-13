@@ -1,0 +1,76 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-body: "Inter", sans-serif;
+    --font-display: "Playfair Display", serif;
+
+    --color-primary: #66CDAA; /* mint green*/
+    --color-secondary: #f2c785; /* yellow */
+    --color-secondary-dark: #efaf4c;
+    --color-secondary-light: #FAE8CD; /* yellow light*/
+    --color-accent: #FF5E4A; /* orange */
+    --color-background: #FBD6D6; /* pale rose */
+    --color-muted: #6A4E44; /* brown */
+    --color-green: #EBF7F1; /* very light green */
+
+    --color-green-transparent: rgba(235, 247, 241, .65);
+    --color-primary-transparent: rgb(102, 205, 170, .85);
+    --color-primary-transparent-2: rgb(102, 205, 170, .65);
+    --color-primary-transparent-3: rgb(102, 205, 170, .45);
+}
+
+/* Base styling */
+@layer base {
+    body {
+        @apply bg-background text-[#2B2B2B] font-body;
+    }
+
+    h1, h2, h3, h4, h5 {
+        @apply font-display;
+    }
+}
+
+/* Components */
+
+@layer components {
+    .btn-large {
+        @apply bg-secondary text-white font-body px-5 py-2 rounded-full hover:bg-secondary-light transition cursor-pointer hover:-translate-px;
+        box-shadow: 1px 1px 5px rgba(0,0,0, .4);
+    }
+
+    .btn-match-secondary {
+        @apply bg-secondary text-white text-sm font-body px-2 py-1 rounded-md hover:bg-secondary-light transition cursor-pointer hover:-translate-px;
+        box-shadow: 1px 1px 5px rgba(0,0,0, .4);
+    }
+
+    .btn-large:hover, .btn-match-secondary:hover {
+        color: var(--color-muted);
+        box-shadow: none;
+    }
+
+    .badge {
+        @apply bg-accent text-white text-sm font-bold tracking-wider px-2 py-1 rounded-lg shadow;
+    }
+}
+
+/* main container */
+.main {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3)), url('./assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #F6F5F3; /* fallback */
+}
+/* flower card width */
+.flower-card-width {
+    width: 100%;
+}
+
+@media (min-width: 400px) {
+    .flower-card-width {
+        width: 290px;
+    }
+}
