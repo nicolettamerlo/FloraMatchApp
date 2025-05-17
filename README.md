@@ -9,6 +9,7 @@
 - ⚛️ **Frontend**: React + Vite + Tailwind CSS
 - 🧠 **Backend**: ASP.NET Core 9.0 (Web API)
 - ☁️ **Deployment**: Azure App Service (Free Tier)
+- 🗄️ **Database**: SQL Database hosted on Azure
 
 🔗 **Live Demo**:  
 https://flora-match-web-cmasgbd7crb6frb7.swedencentral-01.azurewebsites.net/
